@@ -38,6 +38,11 @@ def send_email(data):
     sender_password = os.environ.get('EMAIL_PASSWORD')  # Get password from environment variable
     receiver_email = "hiruyworku00@gmail.com"  # Where to receive the emails
     
+    # Check if email password is configured
+    if not sender_password:
+        print("EMAIL_PASSWORD environment variable not set. Email not sent.")
+        return False
+    
     # Create message
     msg = MIMEMultipart()
     msg['From'] = sender_email
