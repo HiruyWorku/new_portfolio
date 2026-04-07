@@ -2,101 +2,646 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="website created by Hiruy" name="author">
-
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
-  <link href="static/assets/laptop.png" rel="icon">
-
-  <title>Hiruy's portfolio</title>
-
-  <!-- Bootstrap CSS for navbar and layout -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="./static/main.css" rel="stylesheet">
-  <style>
-    /* Only style the animated text, not the whole hero section */
-    #typed, #typed-strings span {
-      font-family: 'Roboto Mono', monospace !important;
-      font-weight: 700 !important;
-      font-size: 4em !important; /* Adjust as needed */
-      color: #fff !important;
-    }
-    .hero-full-container h1 {
-      font-family: 'Roboto Mono', monospace !important;
-      font-size: 2em !important; /* or whatever size you want */
-      font-weight: 700 !important;
-      color: #fff !important;
-    }
-    .typed-style {
-      font-family: 'Roboto Mono', monospace !important;
-      font-size: 4em !important;
-      font-weight: 700 !important;
-      color: #fff !important;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hiruy Worku — Software Engineer specializing in AI systems, distributed infrastructure, and full-stack development. CS student at The College of Wooster.">
+  <meta name="author" content="Hiruy Worku">
+  <meta property="og:title" content="Hiruy Worku — Software Engineer">
+  <meta property="og:description" content="Software engineer building intelligent systems at the intersection of AI and infrastructure.">
+  <meta property="og:type" content="website">
+  <title>Hiruy Worku — Software Engineer</title>
+  <link rel="icon" href="./static/assets/laptop.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./static/portfolio.css">
 </head>
+<body>
 
-<body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-<!-- Add your content of header -->
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-default">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="Hiruy Worku — Home">Hiruy Worku</a>
 
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">01 : Home</a></li>
-          <li><a href="./works.html" title="">02 : Works</a></li>
-          <li><a href="./about.html" title="">03 : About me</a></li>
-          <li><a href="./contact.html" title="">04 : Contact</a></li>
-        </ul>
-      </div> 
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="https://livewooster-my.sharepoint.com/:b:/g/personal/hworku27_wooster_edu/EU5yS7PaXYxGq_g1S5ddM8ABomwBoSM1jNKfmpKpKRLp8A?e=mlHMeC"
+           target="_blank" rel="noopener" class="nav-resume-btn">Resume ↗</a>
+      </li>
+    </ul>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div class="hero">
+    <!-- Left: text content -->
+    <div class="hero-left">
+      <div class="hero-eyebrow fade-in">Software Engineering · AI · Systems</div>
+
+      <h1 class="hero-name fade-in fade-in-delay-1">
+        Build what<br>
+        <span class="hero-name-accent">matters.</span>
+      </h1>
+
+      <p class="hero-tagline fade-in fade-in-delay-2">
+        Software engineer focused on<br>intelligent systems.
+      </p>
+
+      <p class="hero-desc fade-in fade-in-delay-3">
+        CS student at The College of Wooster. Previously shipped multi-agent AI at
+        Schneider Electric. Interested in LLMs, distributed infrastructure, and tools
+        that solve real problems.
+      </p>
+
+      <div class="hero-cta fade-in fade-in-delay-4">
+        <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          View Projects
+        </a>
+        <a href="https://github.com/HiruyWorku" target="_blank" rel="noopener" class="btn btn-secondary" id="hero-github">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/hiruyworku/" target="_blank" rel="noopener" class="btn btn-secondary" id="hero-linkedin">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
     </div>
-  </nav>
-</header>
-<!-- Add your site or app content here -->
-  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./static/assets/images/space.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="hero-full-wrapper">
-            <div class="text-content">
-              <h1>
-                <span class="typed-style">Hello,</span><br>
-                <span id="typed-strings">
-                  <span>I'm Hiruy(Ru) Worku</span>
-                  <span>Student + Engineer</span>
-                  <span>Prev. SWE intern @ Schneider Electric</span>
-                  <span>Incoming SWE intern @ .........</span>
-                </span>
-                <span id="typed"></span>
-              </h1>
-            </div>
+
+    <!-- Right: project "artifact" cards  -->
+    <div class="hero-right fade-in fade-in-delay-3">
+
+      <div class="hero-card">
+        <div class="hero-card-meta">
+          <span>Schneider Electric</span>
+          <span>·</span>
+          <span>May–Jul 2025</span>
+        </div>
+        <div class="hero-card-title">
+          Built a multi-agent MCP server — Coordinator delegates to Knowledge, Metrics &amp; Invoice agents with 95% task automation.
+        </div>
+        <div class="hero-card-tag accent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Shipped
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-meta">
+          <span>Senior Thesis</span>
+          <span>·</span>
+          <span>In Progress</span>
+        </div>
+        <div class="hero-card-title">
+          Tandem — real-time ASL recognition pipeline for accessible video conferencing. CNN + WebRTC + 3D avatar signing.
+        </div>
+        <div class="hero-card-tag neutral">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Active research
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-meta">
+          <span>RL Maze</span>
+          <span>·</span>
+          <span>Research Paper</span>
+        </div>
+        <div class="hero-card-title">
+          CUDA-accelerated RL for route optimization. GPU training cut convergence time by 4×. On-Policy MC, Off-Policy MC, Policy Iteration.
+        </div>
+        <div class="hero-card-tag accent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Published
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS BAR
+     ============================================================ -->
+<div class="stats-bar fade-in">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number">10+</div>
+      <div class="stat-label">Projects shipped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">4×</div>
+      <div class="stat-label">Research roles</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">95%</div>
+      <div class="stat-label">Task automation at SE</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">20M+</div>
+      <div class="stat-label">Dev records analyzed</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div>
+        <p class="about-eyebrow fade-in">About</p>
+        <h2 class="about-heading fade-in fade-in-delay-1">
+          Engineer with a bias<br>toward <em>building.</em>
+        </h2>
+
+        <div class="about-text">
+          <p class="fade-in fade-in-delay-2">
+            I'm a <strong>Computer Science student</strong> at The College of Wooster, focused on AI systems,
+            backend infrastructure, and full-stack development. My work spans LLM-powered agent pipelines,
+            GPU-accelerated machine learning, and real-time communication tools.
+          </p>
+          <p class="fade-in fade-in-delay-3">
+            I started coding by fixing things — appliances, random electronics — and that same problem-first
+            instinct drives how I approach software. I care less about the stack and more about whether the
+            system actually solves the problem.
+          </p>
+          <p class="fade-in fade-in-delay-4">
+            Beyond engineering, I lead <strong>Black and Code</strong>, Wooster's NSBE chapter, and I'm a
+            collegiate sprinter. I shoot film and track every movie I see on <a href="https://letterboxd.com/hiruy_worku/" target="_blank" rel="noopener">Letterboxd</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-photo-wrap fade-in fade-in-delay-2">
+        <img
+          src="/static/assets/me_images/profile_new.jpg"
+          alt="Hiruy Worku"
+          class="about-photo"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+<section class="section" id="experience">
+  <div class="container">
+    <p class="section-eyebrow fade-in">Experience</p>
+    <h2 class="section-heading fade-in fade-in-delay-1">Where I've <em>worked.</em></h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">May 2025 — Jul 2025</div>
+          <div class="timeline-location">Louisville, KY · Remote</div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-company-row">
+            <img src="./static/assets/images/company-logos/schneider-electric.png" alt="Schneider Electric" class="timeline-company-logo" loading="lazy">
+            <span class="timeline-company">Schneider Electric</span>
           </div>
+          <div class="timeline-role">Software Engineer Intern</div>
+          <ul class="timeline-bullets">
+            <li>Built a multi-agent AI co-pilot using LLMs and LlamaIndex — translated natural language to database queries, reducing retrieval latency by 25% via cosine similarity and lazy prompting.</li>
+            <li>Containerized a Model Context Protocol (MCP) server in FastAPI + Docker, powering a Coordinator Agent that delegates to Knowledge, Metrics, and Invoice agents with 95% task automation.</li>
+          </ul>
+          <div class="timeline-tag-row">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LlamaIndex</span><span class="tag">Docker</span><span class="tag">LLMs</span><span class="tag">MCP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">Jun 2024 — Aug 2024</div>
+          <div class="timeline-location">Morris Plains, NJ · Remote</div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-company-row">
+            <img src="./static/assets/images/company-logos/power-changes-lives.png" alt="Power Changes Lives" class="timeline-company-logo" loading="lazy">
+            <span class="timeline-company">Power Changes Lives</span>
+          </div>
+          <div class="timeline-role">Software Engineer Intern</div>
+          <ul class="timeline-bullets">
+            <li>Refactored static HTML into scalable React components across the company website — cut future development time by 30%.</li>
+            <li>Integrated custom Shopify backend plugins to streamline order fulfillment, boosting operational efficiency by 15%.</li>
+          </ul>
+          <div class="timeline-tag-row">
+            <span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">Shopify</span><span class="tag">Node.js</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">Jan 2025 — Present</div>
+          <div class="timeline-location">Wooster, OH</div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-company-row">
+            <img src="./static/assets/images/company-logos/college-of-wooster.png" alt="The College of Wooster" class="timeline-company-logo" loading="lazy">
+            <span class="timeline-company">The College of Wooster</span>
+          </div>
+          <div class="timeline-role">Teaching Assistant</div>
+          <ul class="timeline-bullets">
+            <li>Supported 50+ students in Scientific Computing (Python) and Advanced Web Development through one-on-one and group tutoring.</li>
+          </ul>
+          <div class="timeline-tag-row">
+            <span class="tag">Python</span><span class="tag">Web Dev</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">Sep 2024 — May 2025</div>
+          <div class="timeline-location">Wooster, OH</div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-company-row">
+            <img src="./static/assets/images/company-logos/college-of-wooster.png" alt="The College of Wooster" class="timeline-company-logo" loading="lazy">
+            <span class="timeline-company">The College of Wooster</span>
+          </div>
+          <div class="timeline-role">AI Research Assistant</div>
+          <ul class="timeline-bullets">
+            <li>Deployed an LLM chatbot with Tesseract OCR for PDF data extraction — improved accuracy by 15% and accelerated researcher query response by 40%. Integrated with Firebase and Apache server.</li>
+          </ul>
+          <div class="timeline-tag-row">
+            <span class="tag">LLMs</span><span class="tag">OCR</span><span class="tag">Firebase</span><span class="tag">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">Sep 2024 — May 2025</div>
+          <div class="timeline-location">Wooster, OH</div>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-company-row">
+            <img src="./static/assets/images/company-logos/college-of-wooster.png" alt="The College of Wooster" class="timeline-company-logo" loading="lazy">
+            <span class="timeline-company">The College of Wooster</span>
+          </div>
+          <div class="timeline-role">Software Ecosystems Research Intern</div>
+          <ul class="timeline-bullets">
+            <li>Authored 13 Bash and Python scripts to mine 20M+ developer contributions from the World of Code dataset — generated language fingerprints and burnout timelines across 10+ languages, 3× faster than prior workflows.</li>
+          </ul>
+          <div class="timeline-tag-row">
+            <span class="tag">Python</span><span class="tag">Bash</span><span class="tag">Data Analysis</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section class="section" id="projects">
+  <div class="container">
+    <p class="section-eyebrow fade-in">Projects</p>
+    <h2 class="section-heading fade-in fade-in-delay-1">Things I've <em>built.</em></h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">01</span>
+          <a href="https://github.com/HiruyWorku" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">Tandem — ASL + Speech</h3>
+        <p class="project-desc">Real-time bridge between deaf and hearing users in video calls. CNN-based ASL recognition feeds speech-to-text and drives a 3D signing avatar via WebRTC.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">WebRTC</span><span class="tech-tag">Flask</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in fade-in-delay-1">
+        <div class="project-card-header">
+          <span class="project-num">02</span>
+          <a href="https://github.com/HiruyWorku/RL-Maze-Reinforcement-Learning-for-Route-Optimization" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">RL Maze — Route Optimization</h3>
+        <p class="project-desc">CUDA-accelerated RL environment for autonomous navigation. Implemented Monte Carlo and Policy Iteration algorithms — GPU training 4× faster than CPU baseline.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">CUDA</span><span class="tech-tag">NumPy</span><span class="tech-tag">RL</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in fade-in-delay-2">
+        <div class="project-card-header">
+          <span class="project-num">03</span>
+          <a href="https://github.com/HiruyWorku/Impulse" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">Impulse — AI Physics Tutor</h3>
+        <p class="project-desc">RL-driven study companion for introductory physics. Adaptive feedback system adjusts quiz difficulty based on real-time performance patterns.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">RL</span><span class="tech-tag">OpenAI API</span><span class="tech-tag">React</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">04</span>
+          <a href="https://github.com/HiruyWorku/A.F.R.O.-Byte" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">AfroByte — Tech Access</h3>
+        <p class="project-desc">Community platform improving access to tech internships, courses, and resources for underrepresented engineers. 300+ active users.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Firebase</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in fade-in-delay-1">
+        <div class="project-card-header">
+          <span class="project-num">05</span>
+          <a href="https://github.com/Wooster-CS320-SP25/heystudents" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">MyMeal — Recipe Platform</h3>
+        <p class="project-desc">Mobile-first social app for sharing and discovering recipes with dietary preference filtering, user profiles, and community discovery feeds.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React Native</span><span class="tech-tag">Node.js</span><span class="tech-tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in fade-in-delay-2">
+        <div class="project-card-header">
+          <span class="project-num">06</span>
+          <a href="https://github.com/WiamSkakri/Mutual-Fund-Calculator" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">Mutual Fund Calculator</h3>
+        <p class="project-desc">Backend API for projecting mutual fund returns using CAPM data. Built for a Goldman Sachs engineering challenge — endpoints validated via Postman.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">REST API</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">07</span>
+          <a href="https://github.com/HiruyWorku/Clara" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">Clara — AI Habit Companion</h3>
+        <p class="project-desc">React Native app tracking room organization with computer vision. Logs behavioral insights and delivers personalized prompts to build lasting habits.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React Native</span><span class="tech-tag">OpenAI</span><span class="tech-tag">Firebase</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in fade-in-delay-1">
+        <div class="project-card-header">
+          <span class="project-num">08</span>
+          <a href="https://github.com/HiruyWorku/chatapp" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">Real-Time Chat App</h3>
+        <p class="project-desc">Event-driven chat platform using Laravel broadcasting, Pusher Channels, and Vue.js — sub-100ms message delivery with presence indicators.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Laravel</span><span class="tech-tag">Vue.js</span><span class="tech-tag">Pusher</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in fade-in-delay-2">
+        <div class="project-card-header">
+          <span class="project-num">09</span>
+          <a href="https://github.com/HiruyWorku/Might-Med-Equip" target="_blank" rel="noopener" class="project-link-icon" aria-label="View on GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+        <h3 class="project-name">Mighty-Med-Equip</h3>
+        <p class="project-desc">Healthcare equipment management platform in Go — inventory tracking, staff access control, maintenance scheduling, with a PostgreSQL backend.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Go</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">REST API</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<section class="section" id="skills">
+  <div class="container">
+    <p class="section-eyebrow fade-in">Skills</p>
+    <h2 class="section-heading fade-in fade-in-delay-1">Languages, frameworks<br>&amp; <em>tools.</em></h2>
+
+    <div class="skills-grid">
+      <div class="fade-in">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Python</span><span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">TypeScript</span><span class="skill-pill">Go</span>
+          <span class="skill-pill">Java</span><span class="skill-pill">C</span>
+          <span class="skill-pill">C#</span><span class="skill-pill">SQL</span>
+          <span class="skill-pill">Bash</span><span class="skill-pill">PHP</span>
+          <span class="skill-pill">R</span>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="skill-group-label">Frameworks & Libraries</div>
+        <div class="skill-pills">
+          <span class="skill-pill">React</span><span class="skill-pill">React Native</span>
+          <span class="skill-pill">Node.js</span><span class="skill-pill">FastAPI</span>
+          <span class="skill-pill">Flask</span><span class="skill-pill">Laravel</span>
+          <span class="skill-pill">Vue.js</span><span class="skill-pill">TensorFlow</span>
+          <span class="skill-pill">LlamaIndex</span><span class="skill-pill">CUDA</span>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-2">
+        <div class="skill-group-label">Infrastructure & Tools</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span>
+          <span class="skill-pill">Terraform</span><span class="skill-pill">NGINX</span>
+          <span class="skill-pill">Git</span><span class="skill-pill">Linux</span>
+          <span class="skill-pill">Figma</span><span class="skill-pill">Postman</span>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-3">
+        <div class="skill-group-label">Cloud & Databases</div>
+        <div class="skill-pills">
+          <span class="skill-pill">AWS (EC2, S3, RDS)</span>
+          <span class="skill-pill">Azure</span><span class="skill-pill">GCP</span>
+          <span class="skill-pill">Firebase</span><span class="skill-pill">PostgreSQL</span>
+          <span class="skill-pill">MongoDB</span><span class="skill-pill">MySQL</span>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-<!-- JS includes: jQuery, Typed.js, then main.js -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script type="text/javascript" src="./static/main.js"></script>
+<!-- ============================================================
+     RESEARCH & WRITING
+     ============================================================ -->
+<section class="section" id="research">
+  <div class="container">
+    <p class="section-eyebrow fade-in">Research</p>
+    <h2 class="section-heading fade-in fade-in-delay-1">Papers &amp; <em>writing.</em></h2>
+
+    <div class="research-list fade-in fade-in-delay-2">
+
+      <div class="research-item">
+        <div>
+          <div class="research-type">Research Paper</div>
+          <div class="research-title">CUDA-Accelerated Reinforcement Learning for Route Optimization</div>
+          <div class="research-meta">The College of Wooster · 2024</div>
+        </div>
+        <a href="https://livewooster-my.sharepoint.com/:b:/g/personal/hworku27_wooster_edu/EU5yS7PaXYxGq_g1S5ddM8ABomwBoSM1jNKfmpKpKRLp8A?e=mlHMeC" target="_blank" rel="noopener" class="research-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View PDF
+        </a>
+      </div>
+
+      <div class="research-item">
+        <div>
+          <div class="research-type">Research Paper</div>
+          <div class="research-title">Exploring the Traveling Salesman Problem: Transition to Advanced Mathematics</div>
+          <div class="research-meta">The College of Wooster · 2024</div>
+        </div>
+        <a href="https://livewooster-my.sharepoint.com/:b:/g/personal/hworku27_wooster_edu/EZTb6ctPHBtHgJnokC_TxMcBy9n32Om0oPpUZP0ZqudM-w?e=zDls5l" target="_blank" rel="noopener" class="research-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View PDF
+        </a>
+      </div>
+
+      <div class="research-item">
+        <div>
+          <div class="research-type">Senior Thesis — In Progress</div>
+          <div class="research-title">Real-Time ASL and Speech Communication for Accessible Video Conferencing</div>
+          <div class="research-meta">The College of Wooster · 2025–2026</div>
+        </div>
+        <span class="research-link" style="cursor:default;opacity:0.45;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          In Progress
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT  (dark section)
+     ============================================================ -->
+<section class="section" id="contact">
+  <div class="container">
+    <p class="section-eyebrow fade-in">Contact</p>
+
+    <div class="contact-grid">
+      <div class="contact-wrap">
+        <h2 class="contact-heading fade-in fade-in-delay-1">
+          Let's work<br><em>together.</em>
+        </h2>
+        <p class="contact-desc fade-in fade-in-delay-2">
+          I'm actively looking for Summer 2026 internship opportunities in software engineering,
+          AI infrastructure, or systems engineering. Reach out — I reply to every message.
+        </p>
+
+        <a href="mailto:hiruyworku00@gmail.com" class="contact-email-link fade-in fade-in-delay-3">
+          hiruyworku00@gmail.com
+        </a>
+
+        <div class="contact-social fade-in fade-in-delay-4">
+          <a href="https://github.com/HiruyWorku" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/hiruyworku/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.instagram.com/hiruy_00/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://letterboxd.com/hiruy_worku/" target="_blank" rel="noopener" class="social-link" aria-label="Letterboxd">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap fade-in fade-in-delay-3">
+        <p class="contact-form-title">Send a message</p>
+        <form action="/submit_form" method="post" id="contact-form">
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" id="email" name="email" type="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input class="form-input" id="subject" name="subject" type="text" placeholder="Internship / Collaboration" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" rows="4" placeholder="Tell me about the role or project..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER (dark)
+     ============================================================ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">© 2026 Hiruy Worku</p>
+    <div class="footer-links">
+      <a href="https://github.com/HiruyWorku" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/hiruyworku/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#hero">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./static/portfolio.js"></script>
 </body>
-
 </html>
