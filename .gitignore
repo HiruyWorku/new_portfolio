@@ -10,3 +10,5 @@ venv/
 instance/
 vendor/
 .bundle/
+database.csv
+database.txt

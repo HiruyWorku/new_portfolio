@@ -1,7 +1,0 @@
-title: Your Site Title
-theme: jekyll-theme-primer
-plugins:
-  - jekyll-seo-tag
-
-exclude:
-  - bin/

@@ -1,6 +1,0 @@
-URL Shortener Project
-Python, Flask, JSON
-View Project
-
-• Collaborated on building a Python-based URL shortener using Flask, enabling users to generate shortened URLs, redirect to original links, and track total shortened URLs in real time
-• Enhanced functionality by implementing data persistence with JSON files and introducing features to reset or clear stored URL mappings 

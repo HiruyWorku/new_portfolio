@@ -1,7 +1,0 @@
-Personal Portfolio Website
-Python, Flask, HTML, CSS, JavaScript, Bootstrap
-View Project
-
-• Developed a responsive personal portfolio website using Python Flask framework, featuring dynamic content rendering, contact form functionality, and professional project showcase sections
-• Implemented modern UI/UX design with Bootstrap components, custom CSS styling, and interactive JavaScript animations including typing effects and smooth navigation
-• Enhanced user experience through responsive design principles, optimized static asset management, and integrated contact form with server-side processing capabilities 
