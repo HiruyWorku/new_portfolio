@@ -88,6 +88,7 @@ class PortfolioTests(unittest.TestCase):
         about = self.html.split('id="about"', 1)[1].split('id="experience"', 1)[0]
         self.assertIn("Computer Science and Mathematics", about)
         self.assertIn("cinematography, photography, design, drawing, and prototyping", about)
+        self.assertIn("I watch a lot of films, too.", about)
         self.assertIn("contributing to open source", about)
         self.assertIn("For my senior thesis, I built Tandem", about)
         self.assertNotIn("community-list", about)
@@ -160,11 +161,17 @@ class PortfolioTests(unittest.TestCase):
     def test_static_images_remain_available(self):
         assets = [
             "about/profile.webp", "about/nvidia-event.jpg",
-            "about/tandem-poster.jpg", "about/tandem-defense.jpg"
+            "about/tandem-poster.jpg", "about/tandem-defense.jpg", "favicon-h.png"
         ]
         for asset in assets:
             with self.client.get(f"/static/assets/{asset}") as response:
                 self.assertEqual(response.status_code, 200)
+
+    def test_favicon_is_used_on_both_pages(self):
+        favicon = '<link rel="icon" type="image/png" href="./static/assets/favicon-h.png" />'
+        self.assertIn(favicon, self.html)
+        thankyou = self.client.get("/thankyou.html").get_data(as_text=True)
+        self.assertIn(favicon, thankyou)
 
 
 if __name__ == "__main__":
